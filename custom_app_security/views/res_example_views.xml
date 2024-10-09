@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- res.example action window -->
+    <record id="res_example_action" model="ir.actions.act_window">
+        <field name="name">Example Data</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.example</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Add example data here...
+            </p><p>
+                <!-- More details about what a user can do with this object will be OK --> 
+            
+            </p>
+        </field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="res_example_menu_act" name="Example Data" parent="stock.menu_stock_inventory_control" 
+        action="res_example_action" sequence="100"/>
+</odoo>

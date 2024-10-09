@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record model="res.groups" id="group_own_res_example">
+        <field name="name">Own Example Data</field>
+    </record>
+
+    <record id="res_example_01_rule" model="ir.rule">
+        <field name="name">Own Data</field>
+        <field ref="model_res_example" name="model_id"/>
+        <field name="groups" eval="[(4, ref('custom_app_security.group_own_res_example'))]"/>
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+    </record>
+
+</odoo>
